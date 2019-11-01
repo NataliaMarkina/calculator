@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<h1>Калькулятор</h1>
+<div class="content" id="content">
+    <div class="mySelect">
+        <label for="list">Выберите, какое действие Вы хотите выполнить:</label>
+        <select id="list" oninput="chooseSign()">
+            <option value="sum">Сумма</option>
+            <option value="dif">Разность</option>
+            <option value="div">Деление</option>
+            <option value="mul">Умножение</option>
+        </select><br>
+    </div>
+    
+    <div class="expression" id="expression">
+        <label>(</label>
+        <span class="partExpression" id="partExpression">
+            <input type="text" id="startValue">
+            <label id="sign">+</label>
+            <input type="text" id="add">
+        </span>
+        <label>)<sup>2</sup> =</label>
+        <input type="text" id="result" disabled>
+    </div>
+
+    <button onclick="count()">Посчитать</button>
+    <button onclick="addElement()">Добавить элемент</button>
+    <button onclick="reset()">Сбросить</button>
+</div>
+    
+    <script src="Calc.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
